@@ -125,10 +125,12 @@ if __name__ == "__main__":
     os.makedirs(sample_path, exist_ok=True)
     base_count = len(os.listdir(sample_path))
 
+    print(f"Generating {opt.n_samples} samples with prompt: {prompt}")
     all_samples=list()
     with torch.no_grad():
         with model.ema_scope():
             uc = None
+            print(f"n_iter: {opt.n_iter}, n_samples: {opt.n_samples}")
             if opt.scale != 1.0:
                 uc = model.get_learned_conditioning(opt.n_samples * [""])
             for n in trange(opt.n_iter, desc="Sampling"):
