@@ -1,0 +1,4 @@
+/models/
+/latent_diffusion.egg-info/
+*.pyc
+*.png

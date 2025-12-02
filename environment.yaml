@@ -24,4 +24,5 @@ dependencies:
     - transformers==4.3.1
     - -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
     - -e git+https://github.com/openai/CLIP.git@main#egg=clip
+    - -e git+https://github.com/arogozhnikov/einops.git@821861ad4013486fd77ee3cd217fdd2b80378922
     - -e .
